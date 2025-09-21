@@ -1,0 +1,82 @@
+<aside style="padding:12px">
+    <div class="card">
+      <h3>Anúncio em destaque</h3>
+      <img src="https://source.unsplash.com/600x400/?business,shop" alt="Loja em Rolândia" style="width:100%;height:auto;border-radius:8px;margin-top:8px">
+      <p style="margin-top:8px;color:var(--muted)">Sua empresa pode aparecer aqui em destaque com o Plano Premium.</p>
+    </div>
+  </aside>
+</section>
+
+<section id="planos">
+  <h2 style="margin-top:16px">Planos disponíveis</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Grátis</h3>
+      <p>Cadastro básico do seu negócio.</p>
+      <ul>
+        <li>Sem fotos</li>
+        <li>Sem vídeos</li>
+        <li>Sem promoções</li>
+      </ul>
+      <a class="btn" href="#formulario">Cadastrar Grátis</a>
+    </div>
+    <div class="card">
+      <h3>Premium</h3>
+      <p>Assinatura anual com destaque completo.</p>
+      <ul>
+        <li>Fotos e vídeos do negócio</li>
+        <li>Promoções e ofertas</li>
+        <li>Prioridade na visualização</li>
+      </ul>
+      <p><strong>12x R$59,90 ou R$718,80 à vista</strong></p>
+      <div class="cta-row">
+        <a class="btn" href="#link-pix">Pagar com Pix</a>
+        <a class="btn" href="#link-cartao">Cartão (12x)</a>
+        <a class="btn" href="#link-boleto">Boleto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="assinar" style="margin-top:18px">
+  <h2>Como assinar</h2>
+  <p>Ao clicar no botão de pagamento, você será direcionado ao checkout seguro do Mercado Pago para concluir sua assinatura Premium.</p>
+</section>
+
+<section id="faq" class="faq">
+  <h2 style="margin-top:18px">Dúvidas frequentes</h2>
+  <div class="faq-item">
+    <div class="question">O que inclui o plano gratuito?<span>+</span></div>
+    <div class="answer">Cadastro básico, sem fotos, vídeos ou promoções. Ideal para quem quer aparecer no guia sem investimento inicial.</div>
+  </div>
+  <div class="faq-item">
+    <div class="question">Como funciona o plano Premium?<span>+</span></div>
+    <div class="answer">Permite fotos, vídeos, promoções e prioridade de visualização. O pagamento é anual, com opções de Pix, cartão ou boleto.</div>
+  </div>
+</section>
+
+<section id="contato" style="margin-top:18px">
+  <h2>Contato</h2>
+  <p>Fale comigo pelo WhatsApp: <a href="https://wa.me/5543999140090" target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a></p>
+  <p style="color:var(--muted)">CNPJ: 00.000.000/0000-00 • <a href="#">Política de Privacidade</a></p>
+</section>
+
+  </main>  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>© <span id="year"></span> Guia Rolândia — Todos os direitos reservados</div>
+      <div style="color:var(--muted)">Desenvolvido com ❤️ • Modelo gratuito</div>
+    </div>
+  </footer>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.faq-item').forEach(item=>{
+      const q = item.querySelector('.question');
+      q.addEventListener('click',()=>{
+        const a = item.querySelector('.answer');
+        const showing = a.style.display === 'block';
+        document.querySelectorAll('.faq .answer').forEach(x=>x.style.display='none');
+        a.style.display = showing ? 'none' : 'block';
+      });
+    });
+  </script></body>
+</html>
